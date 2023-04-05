@@ -1,0 +1,183 @@
+:root {
+  --cm--transition: all .5s;
+}
+
+/* 전체 화면 스타일 */
+#wrap{position: fixed; top: 0;left: 0; width: 100%; height: 100%; min-width: 1400px; min-height: 780px; background-image: url(../img/bg_morning.jpg);background-size: cover; transition: var(--cm--transition);}
+
+/* min-width:1400 - 최소 가로 사이즈 1400px : 1400보다 가로 화면이 작으면 요소 가려짐 */
+/* min-height:780 - 최소 세로 사이즈 780px : 780보다 세로 화면이 작으면 요소 가려짐 */
+
+/* 헤더 제원 : 
+- 로고 : 가로 90 세로 80
+- 위치 : 위에서 30, 옆에서 60
+- 글씨 : 사이즈 14 색 #555
+- sns : 사이즈 18 색 #555
+- sns 링크 :
+<i class="fa fa-facebook">
+<i class="fa fa-twitter">
+<i class="fa fa-envelope"> */
+
+/* 밑에 네비 제원 사진찍어둠 */
+
+/* header style */
+
+header{width: 100%; height: auto; position: fixed; left: 0; top: 0; display: flex;justify-content: space-between; align-items: center; padding: 30px 60px;}
+
+header .logo{width:90px; height: 80px; background-image: url(../img/logo_b.png); background-size: contain; background-repeat: no-repeat; transition: var(--cm--transition);} 
+/* header .logo img{width: 100%;} */
+
+.navs{display: flex; column-gap: 50px;}
+
+.navs .gnb{display:flex; column-gap: 30px;}
+.navs .gnb a{font-size:14px; color:#555;transition: var(--cm--transition);}
+.navs .sns{display:flex; column-gap: 20px;}
+.navs .sns a{font-size:18px; color:#555;transition: var(--cm--transition);}
+
+/* 시간 모드 버튼 */
+
+.modes{bottom: 70px;width: 100%; height: auto; position: fixed; bottom: 70px;  padding: 0 120px; z-index: 10;}
+
+.modes ul{display: flex; width: 100%; justify-content: space-between;}
+
+.modes ul li{width: 24.25%; background: rgba(255, 255, 255, 0.6); padding:10px 30px; transition: all 0.3s;}
+
+.modes ul li:hover,
+.modes ul li.active{background: rgba(0, 0, 0, 0.6); color: #fff;}
+
+
+/* 배경 구름  */
+.pc-cloud1{position: absolute; top: 0; left: -1146px; opacity: 0.8; animation: pc1 110s linear infinite;transition: var(--cm--transition);}
+.pc-cloud2{position: absolute; top: 20px; left: 0; opacity: 0.8; animation: pc2 110s linear infinite;transition: var(--cm--transition);}
+
+/* 모바일 구름 */
+.mobile-frame .m-cloud1{width: 600px; position: absolute; top: 30px; left: -600px; animation: mc1 110s linear infinite;transition: var(--cm--transition);}
+.mobile-frame .m-cloud2{width: 700px; position: absolute; top:20px; left: -600px; animation: mc2 110s linear infinite;transition: var(--cm--transition);}
+
+@keyframes pc1{
+  0%{left: -1146px;}
+  100%{left: 1950px;}
+}
+
+@keyframes pc2{
+  0%{left: 0;}
+  50%{left: 1950px; opacity: 0;}
+  50.1%{left: -1840px; opacity: 0.8;}
+  100%{left: 0;}
+}
+
+@keyframes mc1{
+  0%{left: -600px;}
+  100%{left: 544px;}
+}
+
+@keyframes mc2{
+  0%{left: 0;}
+  50%{left: 544px; opacity: 0;}
+  50.1%{left: -700px; opacity: 1;}
+  100%{left: 0;}
+}
+
+/* 슬로건박스 */
+
+.slogan{width: 100%; height: auto; position: fixed; left: 120px;top: 50%; transform: translateY(-50%); }
+
+.slogan p{font-size: 50px; color: #666;transition: var(--cm--transition);} 
+.slogan p strong{color: #111;transition: var(--cm--transition);}
+
+.slogan em{font-size: 14px; color: #333;transition: var(--cm--transition);}
+
+/* 모바일 프레임 */
+
+.mobile-frame{position: fixed; top:200px; right: -300px; width: 1226px; height: 809px; background-image: url(../img/phone_morning.png);transition: var(--cm--transition);}
+.mobile-frame p{width: 544px; height: 308px; position: absolute;left: 136px; top: 100px; overflow: hidden; color: #333; font-weight: bold; font-size: 50px;display: flex; align-items: center; justify-content: center; column-gap: 0.5rem; transition: var(--cm--transition);}
+.mobile-frame p span{z-index: 20;}
+
+/* 각 시간별 테마 변경 */
+/* 아침 */
+#wrap.morning{background-image: url(../img/bg_morning.jpg);}
+#wrap.morning header .logo{background-image: url(../img/logo_b.png);}
+#wrap.morning .navs .gnb a{color: #555;}
+#wrap.morning .navs .sns a{color: #555;}
+#wrap.morning .mobile-frame{background-image: url(../img/phone_morning.png);}
+#wrap.morning .slogan p{color: #666;} 
+#wrap.morning .slogan p strong{color: #111}
+#wrap.morning .slogan em{color: #333;}
+#wrap.morning .mobile-frame p{color: #333;}
+
+/* 오후 */
+#wrap.afternoon{background-image: url(../img/bg_afternoon.jpg);}
+#wrap.afternoon header .logo{background-image: url(../img/logo_b.png);}
+#wrap.afternoon .navs .gnb a{color: #555;}
+#wrap.afternoon .navs .sns a{color: #555;}
+#wrap.afternoon .mobile-frame{background-image: url(../img/phone_afternoon.png);}
+#wrap.afternoon .slogan p{color: #666;} 
+#wrap.afternoon .slogan p strong{color: #111}
+#wrap.afternoon .slogan em{color: #333;}
+#wrap.afternoon .mobile-frame p{color: #333;}
+
+/* 저녁 */
+#wrap.evening{background-image: url(../img/bg_evening.jpg);}
+#wrap.evening header .logo{background-image: url(../img/logo_w.png);}
+#wrap.evening .navs .gnb a{color: #fff;}
+#wrap.evening .navs .sns a{color: #fff;}
+#wrap.evening .mobile-frame{background-image: url(../img/phone_evening.png);}
+#wrap.evening .slogan p{color: #444;} 
+#wrap.evening .slogan p strong{color: #fff}
+#wrap.evening .slogan em{color: #333;}
+#wrap.evening .mobile-frame p{color: #fff;}
+
+/* 밤 */
+#wrap.night{background-image: url(../img/bg_night.jpg);}
+#wrap.night header .logo{background-image: url(../img/logo_w.png);}
+#wrap.night .navs .gnb a{color: #fff;}
+#wrap.night .navs .sns a{color: #fff;}
+#wrap.night .mobile-frame{background-image: url(../img/phone_night.png);}
+#wrap.night .slogan p{color: #bbb;} 
+#wrap.night .slogan p strong{color: #fff}
+#wrap.night .slogan em{color: #888;}
+#wrap.night .mobile-frame p{color: #fff;}
+
+/* 배경 구름  */
+.pc-cloud1{opacity: 0.1;}
+.pc-cloud2{opacity: 0.1;}
+
+/* 모바일 구름 */
+.mobile-frame .m-cloud1{opacity: 0.4;}
+.mobile-frame .m-cloud2{opacity: 0.4;}
+
+/* iphone 스위치 */
+.wrap .button {
+  position: relative;
+  width: 58px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #bbb;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.wrap .button .inside {
+  position: absolute;
+  top: 50%;
+  left: 2.5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #eee;
+  transform: translateY(-50%);
+  transition: all 0.2s;
+}
+
+.wrap input:checked ~ label .button {
+  background-color: #2fde54;
+}
+
+.wrap input:checked ~ label .button h3 {
+  opacity: 1;
+}
+
+.wrap input:checked ~ label .button .inside {
+  left: 35px;
+}
+.sr-only{display: none;}

@@ -1,0 +1,12 @@
+완성 사이트 : http://www.dabipyeung.com/step7/ 
+
+참고 사이트  : 
+- 제이쿼리 : https://jquery.com/
+구글cdn 3버전
+- 구글폰트 : https://fonts.google.com/
+- 어썸폰트 : href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+
+
+카멜케이스 : backgroundColor -js
+하이픈 : backgroundcolor - html css
+스네이크 : background_clolr - php

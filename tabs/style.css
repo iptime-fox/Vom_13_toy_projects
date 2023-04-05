@@ -1,0 +1,17 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+body{padding: 100px 10%; }
+.wrapper{margin: auto;}
+
+.btns{display: flex;}
+
+.btns button{border: 0; border-radius: 0; color: #000; padding: 10px 30px;}
+/* .btns button:nth-child(1){background: lightgreen}
+.btns button:nth-child(2){background: lightblue;}
+.btns button:nth-child(3){background: lightcoral;} */
+
+.btns button.active{background: lightcoral; color: #fff;}
+
+.panel{display: none; color: #fff; padding: 20px; background: lightcoral;}
+.panel:nth-child(1){display: block;}
+/* .panel:nth-child(2){background: lightblue;}
+.panel:nth-child(3){background: lightcoral;} */
