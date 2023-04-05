@@ -1,0 +1,10 @@
+ *{margin: 0 ; padding: 0; box-sizing: border-box;}
+ #accordion{width: 100%; max-width: 500px; width: auto; padding: 1rem;}
+ .acc-wrap{border: 1px solid #ed7e7e;}
+ .acc-wrap:not(:last-child){border-bottom:0;}
+
+ .acc-header{display: flex; justify-content: space-between; padding: 1rem; cursor: pointer;}
+ .acc-content{padding: 0 1rem; height: 0; overflow: hidden; transition: all 0.3s;}
+ .acc-header.active + .acc-content{padding: 1rem; height: auto;}
+ .icon{display: flex; align-items: center; transition: all 0.3s;}
+ .acc-header.active .icon{transform: rotate(135deg);}
