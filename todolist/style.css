@@ -1,8 +1,12 @@
 /* Reset Style */
 *{margin: 0; padding: 0; box-sizing: border-box;}
 body{width: 100%; height: 100%; position: fixed; left: 0; top: 0; background: #e0bbe4;font-family: 'Noto Sans KR', sans-serif;}
-.wrapper{width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;}
+.wrapper{width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;flex-direction: column;}
 ul{list-style: none;}
+
+/* Alert Message Style */
+.wrapper .alert{width: 50%; height: auto; padding: 1rem 0; background: #fff; margin-top: .5rem; border-radius: .25rem; text-align: center; display: none;}
+.wrapper .alert p{color: #957dad;}
 
 /* Todo list box style */
 #todo{width: 50%; background: #957dad; border-radius: 0.5rem; padding: 1rem 2rem;}
