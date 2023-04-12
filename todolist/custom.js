@@ -17,15 +17,15 @@ let liContent = '';
 // alertTxt 함수 정의
 const alertTxt = () => {
   alert.style.display = 'block';
-  const alertElement = document.createElement('p'); // p태그 생성
-  alertElement.append('Please enter your Todo List!'); // p태그에 텍스트 추가
-  alert.append(alertElement); // 텍스트가 추가된 p태그를 div 태그 내부에 추가
+  // const alertElement = document.createElement('p'); // p태그 생성
+  // alertElement.append('Please enter your Todo List!'); // p태그에 텍스트 추가
+  alert.textContent = 'Please enter your Todo List!'; // 텍스트 추가
 
   setTimeout(() => {
     // alert.style.display = 'none';
-    alertElement.remove();
+    // alertElement.remove();
     alert.style.display = 'none';
-  }, 1000); // 1초후 메시지 사라짐
+  }, 2000); // 2초후 메시지 사라짐
 };
 
 // todo list 생성 함수 정의
