@@ -1,0 +1,10 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+input, button{border: none; outline: none; border-radius: 0.25rem;}
+.wrapper{width: 100%; height: 100vh; overflow: hidden; background: lightgreen; display: flex; align-items: center;justify-content: center;flex-direction: column;}
+
+.btn-box{margin-bottom: 2rem; display: flex; width: 100%; height: auto; justify-content: center; column-gap: 0.5rem;}
+.btn-box button{width: 10%; padding: 0.5rem 1rem;}
+.btn-box button.active{background: lightcoral; color: #fff;}
+.input-wrapper{width: 80%; display: flex; justify-content: center; column-gap: .5rem;}
+.input-wrapper input{width: 20%; height: auto; padding: 0.5rem;}
+.input-wrapper button{width: 20%; background: lightgoldenrodyellow;}
