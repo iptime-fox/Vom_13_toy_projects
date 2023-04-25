@@ -1,0 +1,3 @@
+.wrapper{width: 100%; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+
+.adr{background: #eee; padding: .5rem 1rem; border-radius: .25rem;}
